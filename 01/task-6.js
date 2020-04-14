@@ -1,0 +1,41 @@
+'use strict';
+
+let input;
+let total = 0;
+
+do {
+    input = prompt(`Текущий результат: ${total}\nВведите операцию в формате <операнд><число>:`);
+    if (input !== null) {
+        const operation = input.slice(0, 1);
+
+        if (operation === "+" || operation === "-" || operation === "/" || operation === "*") {
+            const number = Number(input.slice(1, input.length));
+
+            if (isNaN(number)) {
+                alert("Вы ввели неверное число");
+            } else {
+                let result;
+
+                if (operation === "+") {
+                    result = total + number;
+                } else if (operation === "-") {
+                    result = total - number;
+                } else if (operation === "/") {
+                    result = total / number;
+                } else if (operation === "*") {
+                    result = total * number;
+                } 
+                
+                alert("Результат операции 0" + operation + number + " = " + result);
+
+                total = result;
+                
+            }
+        } else {
+            alert("операция недоступна");
+        }
+    }
+} while (input !== null);
+
+
+// Не знаю, як виконати завдання "После того как пользователь прекратил ввод нажав кнопку Cancel, показать alert со строкой 'Общая сумма чисел равна [сумма]'"
