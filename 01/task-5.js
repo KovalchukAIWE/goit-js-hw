@@ -1,37 +1,50 @@
 'use strict';
 
-const china = 'кИтАЙ';
-const chili = 'Чили';
-const australia = 'Австралия';
-const іndіya = 'Индия';
-const jamayka = 'Ямайка'; 
-
-const chinaInLC = china.toLowerCase();
+let china = 'Китай';
+let chili = 'Чили';
+let australia = 'Австралия';
+let іndіya = 'Индия';
+let jamayka = 'Ямайка'; 
 
 
+let price;
 let userChoice = prompt('Укажите страну для доставки товара:');
+
+let userChoiceInLC = userChoice.toLowerCase();
+
+let chinaInLC = china.toLowerCase();
+let chiliInLC = chili.toLowerCase();
+let australiaInLC = australia.toLowerCase();
+let іndіyaInLC = іndіya.toLowerCase();
+let jamaykaInLC = jamayka.toLowerCase();
 
 let message;
 
-switch (userChoice) {
-    case china:
-        message = 'Доставка в Китай будет стоить 100 кредитов';
+
+switch (userChoiceInLC) {
+    case chinaInLC:
+        price = 100;
+        message = `Доставка в ${china} будет стоить ${price} кредитов`;
         break;
     
-    case chili:
-        message = 'Доставка в Чили будет стоить 250 кредитов';
+    case chiliInLC:
+        price = 250;
+        message = `Доставка в ${chili} будет стоить ${price} кредитов`;
         break;
 
-     case australia:
-        message = 'Доставка в Австралию будет стоить 170 кредитов';
+     case australiaInLC:
+        price = 170;
+        message = `Доставка в ${australia} будет стоить ${price} кредитов`;
         break;
     
-    case іndіya:
-        message = 'Доставка в Индию будет стоить 80 кредитов';
+    case іndіyaInLC:
+        price = 80;
+        message = `Доставка в ${іndіya} будет стоить ${price} кредитов`;
         break;
 
-    case jamayka:
-        message = 'Доставка в Ямайку будет стоить 120 кредитов';
+    case jamaykaInLC:
+        price = 120;
+        message = `Доставка в ${jamayka} будет стоить ${price} кредитов`;
         break;
 
     default:
