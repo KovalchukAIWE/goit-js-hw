@@ -10,8 +10,13 @@ const products = [
 
 const getAllPropValues = function(products, prop) {
   const values = [];
+
   for(const product of products){
+
+    if (prop in product) {
+
       values.push(product[prop]);
+    }
   }
   return values;
 };

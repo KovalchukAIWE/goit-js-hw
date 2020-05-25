@@ -2,17 +2,20 @@
 'use strict';
 
 
-let totalTask = [];
-
 const findBestEmployee = function (employees) {
 
-  const entries = Object.entries(employees);
-  for (const entry of entries) {
-    const key = entry[0];
-    const value = entry[1];
-    totalTask.push(Number(value));
-    console.log(Math.max(totalTask));
+  let max = 0;
+  let name;
+
+  const keys = Object.keys(employees);
+
+  for (const key of keys) {
+    if (max < employees[key]) {
+      max = employees[key];
+      name = key;
+      }
   }
+  return name;
 }
 
 console.log(
