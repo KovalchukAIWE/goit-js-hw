@@ -1,6 +1,5 @@
 
 'use strict';
-
 class User {
   constructor(name, age, followers) {
     this.name = name;
