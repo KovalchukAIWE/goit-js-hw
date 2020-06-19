@@ -14,10 +14,8 @@ class Storage {
   }
 
   removeItem(item) {
-    for (let i = 0; i < this.items.length; i += 1) {
-      if (this.items[i] === item) {
-        this.items.splice(i, 1);
-      }
+    if(this.items.includes(item)) {
+      this.items.splice(this.items.indexOf(item), 1);
     }
   }
 }

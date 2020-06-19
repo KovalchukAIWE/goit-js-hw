@@ -6,7 +6,7 @@ class Car {
         this.speed = 0;
         this.distance = 0;
         this.isOn = false;
-        this.price = objIn.price;
+        this._price = objIn.price;
         this.maxSpeed = objIn.maxSpeed;
       }
     
@@ -30,6 +30,7 @@ class Car {
     
       turnOff() {
         this.isOn = false;
+        this.speed = 0;
       }
     
       accelerate(value) {
