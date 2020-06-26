@@ -1,7 +1,8 @@
-ul {
+#gallery {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    list-style: none;
   }
 #gallery img {
     width: 100%;
