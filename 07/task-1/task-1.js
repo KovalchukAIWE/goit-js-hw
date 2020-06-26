@@ -1,11 +1,10 @@
 'use strict';
 
-const getTitles = () => {
-    const titles = [...document.querySelectorAll('.item')];
+const categories = document.querySelector('#categories');
 
-    titles.forEach(block => {
-        const name = block.querySelector(".item > h2").textContent;
-        
-    })
-}
+console.log(`В списке ${categories.children.length} категории.`);
 
+categories.querySelectorAll('.item').forEach(item => {
+    console.log(`Категория: ${item.querySelector('h2').textContent}`);
+    console.log(`Количество элементов: ${item.querySelector('ul').children.length}`);
+});

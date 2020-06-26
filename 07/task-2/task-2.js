@@ -9,17 +9,11 @@ const ingredients = [
     'Приправы',
   ];
 
-  const ingredientList = ingredients.map((index) => {
-    return index;
+  const ingredientList = ingredients.map(item => {
+    const list = document.createElement('li');
+    list.textContent = item;
+    
+    return list;
   });
 
- const container = document.createElement('ul');
- container.classList.toggle('ingredients');
-
-
- const newList = document.createElement('li');
- newList.textContent = `${ingredientList}`;
-
- container.appendChild(newList);
-
- console.log(container);
+  document.querySelector('#ingredients').prepend(...ingredientList);
