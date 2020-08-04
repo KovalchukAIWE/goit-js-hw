@@ -57,6 +57,6 @@ const timer = new CountdownTimer({
   targetDate: new Date('Aug 10, 2020'),
 });
 
-const currentDate = document.querySelector('.js-target-date');
+const currentDate = document.querySelector('.target-date');
 const endingDate = timer.date.toDateString();
 currentDate.textContent = endingDate;
