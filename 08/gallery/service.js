@@ -10,7 +10,6 @@ export const tamplate = item => {
   
   const modalWindow = document.querySelector('.js-lightbox');
   const modalImage = document.querySelector('.lightbox__image');
-  // const closeModalBtn = document.querySelector('button[data-action="close-lightbox"]');
   let onTarget;
   
   export function openModal(e) {
@@ -27,7 +26,6 @@ export const tamplate = item => {
     modalImage.setAttribute('src', '');
     modalWindow.classList.remove('is-open');
     window.removeEventListener('keydown', changeImageInModal);
-    // closeModalBtn.addEventListener("click", closeModal);
   }
   
   function changeImageInModal(e) {
